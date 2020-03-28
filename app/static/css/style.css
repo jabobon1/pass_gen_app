@@ -12,6 +12,11 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    font: 300 30px 'pt sans', sans-serif;
+    text-align: center;
+}
+
 .nav a {
     text-decoration: none;
 }
@@ -549,11 +554,6 @@ p.nova-text {
     opacity: 1;
 }
 
-/*input.result-password {*/
-/*    width: 100px;*/
-/*    text-align: center;*/
-/*}*/
-
 .result_areas {
     width: 85%;
     margin: 5px;
@@ -571,3 +571,14 @@ p.nova-text {
     padding: 10px;
 }
 
+.about {
+    margin: auto;
+    position: absolute;
+    width: 50%;
+    top: 40%;
+    padding: 10px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+
+}
