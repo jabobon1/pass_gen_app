@@ -1,0 +1,573 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700);
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #f1f9f9;
+}
+
+h1 {
+    font: 400 40px 'pt sans', sans-serif;
+    text-align: center;
+}
+
+.nav a {
+    text-decoration: none;
+}
+
+.nav {
+    height: 70px;
+    background: #222;
+    position: relative;
+}
+
+.nav > ul {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav > ul > li > ul {
+    position: absolute;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nav > ul > li:hover > ul li a {
+    opacity: 1;
+    height: 50px;
+    transition: all .3s linear;
+    -o-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+}
+
+.nav > ul > li > ul a {
+    display: block;
+    color: #222;
+    width: 150px;
+    line-height: 50px !important;
+    font: 700 14px 'pt sans', sans-serif;
+    background: #eee;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    padding: 0 5px;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all .3s linear .2s;
+    -o-transition: all .3s linear .2s;
+    -moz-transition: all .3s linear .2s;
+    -webkit-transition: all .3s linear .2s;
+}
+
+.nav > ul > li {
+    float: left;
+    position: relative;
+}
+
+.nav > ul > li > a {
+    padding: 0 20px;
+    color: #fff;
+    display: block;
+    line-height: 70px !important;
+    font: 400 15px 'PT Sans', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.lamp span {
+    display: block;
+    height: 4px;
+    background: #ee6666;
+    position: relative;
+}
+
+.lamp span:after {
+    bottom: 100%;
+    left: 50%;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(238, 102, 102, 0);
+    border-bottom-color: #ee6666;
+    border-width: 4px;
+    margin-left: -4px;
+}
+
+.lamp {
+    position: absolute !important;
+    height: 4px;
+    top: 66px;
+    background: #333;
+    transition: all .3s linear;
+    -o-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+}
+
+.selected.active > a, .active > a {
+    transition: all .3s linear;
+    -o-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    color: #fff;
+}
+
+.credit {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.blog-link {
+    color: #fff;
+    text-decoration: none;
+    background: #eee;
+    background-size: 40px;
+    line-height: 50px;
+    display: inline-block;
+    padding: 0 10px;
+    border-radius: 4px;
+    border-bottom: 3px solid #ddd;
+    font-family: 'open sans', sans-serif;
+    margin: 10px;
+}
+
+.slidecontainer {
+    width: 30%;
+    margin: 5px;
+    position: relative;
+    top: 30%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+
+
+}
+
+.generate_pass {
+    width: 30%;
+    margin: 5px;
+    position: relative;
+    top: 55%;
+    left: 70%;
+    margin-right: -30%;
+    transform: translate(-50%, -50%)
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #5395af;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #5395af;
+    cursor: pointer;
+}
+
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.sliderer {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.sliderer:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .sliderer {
+    background-color: #2196F3;
+}
+
+input:focus + .sliderer {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .sliderer:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.sliderer.round {
+    border-radius: 34px;
+}
+
+.sliderer.round:before {
+    border-radius: 50%;
+}
+
+.inlineess-left {
+    display: inline;
+    width: 30%;
+    margin: 5px;
+    position: absolute;
+    left: 0%;
+    margin-right: -100%;
+    transform: translate(-50%, -50%)
+
+}
+
+.inlineess-center {
+    display: inline;
+    width: 30%;
+    margin: 5px;
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+
+}
+
+.inlineess-right {
+    display: inline;
+    width: 30%;
+    margin: 5px;
+    position: absolute;
+    left: 100%;
+    margin-right: -0%;
+    transform: translate(-50%, -50%)
+
+}
+
+.toggle_area {
+    width: 30%;
+    top: 60%;
+    margin: 5px;
+    position: relative;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+
+
+}
+
+/* CSS rules are kept repetitive so that you can get CSS rules for each button easily :) */
+
+* {
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+*:focus {
+    outline: none;
+}
+
+
+#app-cover {
+    display: table;
+    width: 600px;
+    margin: 80px auto;
+    counter-reset: button-counter;
+}
+
+.row {
+    display: table-row;
+}
+
+.toggle-button-cover {
+    display: table-cell;
+    position: relative;
+    width: 200px;
+    height: 130px;
+    box-sizing: border-box;
+}
+
+
+
+.button-cover:before {
+    counter-increment: button-counter;
+    content: counter(button-counter);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #d7e3e3;
+    font-size: 12px;
+    visibility: hidden;
+    line-height: 1;
+    padding: 5px;
+}
+
+.button-cover, .knobs, .layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.button {
+    position: relative;
+    top: 50%;
+    width: 74px;
+    height: 36px;
+    margin: -20px auto 0 auto;
+    overflow: hidden;
+}
+
+.button.r, .button.r .layer {
+    border-radius: 100px;
+}
+
+.button.b2 {
+    border-radius: 2px;
+}
+
+.checkbox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.knobs {
+    z-index: 2;
+}
+
+.layer {
+    width: 100%;
+    background-color: #5395af;
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+
+/* Button 1 */
+#button-1 .knobs:before {
+    content: 'ON';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 20px;
+    height: 10px;
+    color: #2b312e;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    /*line-height: 1;*/
+    padding: 9px 4px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+}
+
+#button-1 .checkbox:checked + .knobs:before {
+    content: 'OFF';
+    color: #fff;
+
+    left: 42px;
+    background-color: #2b312e;
+}
+
+#button-1 .checkbox:checked ~ .layer {
+    background-color: #c2c1bf;
+}
+
+#button-1 .knobs, #button-1 .knobs:before, #button-1 .layer {
+    transition: 0.3s ease all;
+}
+
+p.nova-text {
+    text-align: center;
+}
+
+.box {
+    width: 30%;
+    margin: 5px;
+    position: relative;
+    top: 65%;
+    left: 60%;
+    margin-right: -40%;
+    transform: translate(-50%, -50%)
+}
+
+.btn:link,
+.btn:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 20px 40px;
+    border-radius: 100px;
+    display: inline-block;
+    transition: all .5s;
+}
+
+.btn-white {
+    background: #fff;
+    color: #000;
+}
+
+.btn:hover {
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+.btn:active {
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-1px);
+}
+
+.btn-bottom-animation-1 {
+    animation: comeFromBottom 1s ease-out .8s;
+}
+
+.btn::after {
+    content: "";
+    text-decoration: none;
+    text-transform: uppercase;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 100px;
+    display: inline-block;
+    z-index: -1;
+    transition: all .5s;
+}
+
+.btn-white::after {
+    background: #fff;
+}
+
+.btn-animation-1:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+@keyframes comeFromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/*input.result-password {*/
+/*    width: 100px;*/
+/*    text-align: center;*/
+/*}*/
+
+.result_areas {
+    width: 85%;
+    margin: 5px;
+    align-content: baseline;
+
+
+}
+
+.center_div {
+    margin: auto;
+    position: center;
+    width: 40%;
+    top: 33%;
+    border: 3px solid #2b312e;
+    padding: 10px;
+}
+
